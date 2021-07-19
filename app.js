@@ -12,7 +12,12 @@ const app = Vue.createApp({  //Vue => we have access to this obj, because of our
   },
   methods: {
     getUser() {
-      console.log(this.firstName);
+      // console.log(this.firstName);
+      this.firstName =  "Mohsen",
+      this.lastName = "Manouchehri",
+      this.email = "manouchehri62@gmail.com",
+      this.gender = "male",
+      this.picture = "https://e7.pngegg.com/pngimages/870/211/png-clipart-iphone-world-emoji-day-man-iphone-electronics-face.png"
     }
   }
 });
