@@ -6,7 +6,7 @@ const app = Vue.createApp({  //Vue => we have access to this obj, because of our
       firstName: "Mahsa",
       lastName: "Ameri",
       email: "amerimahsa@yahoo.com",
-      gender: "F",
+      gender: "female",
       picture: "https://e7.pngegg.com/pngimages/961/160/png-clipart-bitstrips-avatar-emoji-avatar-comics-face.png"
     }
   }
