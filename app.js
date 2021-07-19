@@ -1,5 +1,5 @@
 const app = Vue.createApp({  //Vue => we have access to this obj, because of our CDN we have in html(script tag for Vue)
-  template: '<h1>Hello {{firstName}}</h1>',
+  // template: '<h1>Hello {{firstName}}</h1>', we can move our template into html
   // data is func that returns an obj
   data() {
     return {
