@@ -10,8 +10,15 @@ const app = Vue.createApp({  //Vue => we have access to this obj, because of our
       picture: "https://e7.pngegg.com/pngimages/961/160/png-clipart-bitstrips-avatar-emoji-avatar-comics-face.png"
     }
   },
-  methods: {
-    getUser() {
+  methods: {         // we want to fetch random users through API with async await
+    async getUser() {
+
+      const response = await fetch("https://randomuser.me/api");
+      // OR : const { results } = await response.json();
+      const data = await response.json();
+      const result = data.results;
+      console.log(result); // will be arr of 1 obj will all data of person
+      
       // console.log(this.firstName);
       this.firstName =  "Mohsen",
       this.lastName = "Manouchehri",
