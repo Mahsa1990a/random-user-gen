@@ -14,7 +14,11 @@
 <body>
   <!-- whatever we do with js will load and out put with this div -->
   <div id="app">
-    <h1>Hello {{firstName}}</h1>
+    <!-- We can't use {{picture}}, should use v-bind and src="picture" -->
+    <img v-bind:src="picture" alt="pic">
+    <h1>{{firstName}} {{lastName}}</h1>
+    <h3>Email: {{email}}</h3>
+    <button>Get Random User</button>
   </div>
 
 
