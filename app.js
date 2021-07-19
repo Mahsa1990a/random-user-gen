@@ -17,14 +17,16 @@ const app = Vue.createApp({  //Vue => we have access to this obj, because of our
       // OR : const { results } = await response.json();
       const data = await response.json();
       const result = data.results;
-      console.log(result); // will be arr of 1 obj will all data of person
-      
-      // console.log(this.firstName);
-      this.firstName =  "Mohsen",
-      this.lastName = "Manouchehri",
-      this.email = "manouchehri62@gmail.com",
-      this.gender = "male",
-      this.picture = "https://e7.pngegg.com/pngimages/870/211/png-clipart-iphone-world-emoji-day-man-iphone-electronics-face.png"
+      // console.log(result); // will be arr of 1 obj will all data of person
+
+      // console.log(this.firstName); //Mahsa
+
+      // Now instead of setting it to hard coded we want to set it into result
+      this.firstName =  result[0].name.first;
+      this.lastName = result[0].name.last;
+      this.email = result[0].email;
+      this.gender = result[0].gender;
+      this.picture = result[0].picture.large;
     }
   }
 });
