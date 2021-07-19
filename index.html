@@ -20,7 +20,8 @@
     <img :class="gender" v-bind:src="picture" v-bind:alt="`${firstName} ${lastName}`">
     <h1>{{firstName}} {{lastName}}</h1>
     <h3>Email: {{email}}</h3>
-    <button :class="gender">Get Random User</button>
+    <!-- adding event for button with v-on and click is event and will execute getUser -->
+    <button v-on:click="getUser()" :class="gender">Get Random User</button>
   </div>
 
 
