@@ -15,7 +15,7 @@
   <!-- whatever we do with js will load and out put with this div -->
   <div id="app">
     <!-- We can't use {{picture}}, should use v-bind and src="picture" -->
-    <img v-bind:src="picture" alt="pic">
+    <img v-bind:src="picture" v-bind:alt="`${firstName} ${lastName}`">
     <h1>{{firstName}} {{lastName}}</h1>
     <h3>Email: {{email}}</h3>
     <button>Get Random User</button>
